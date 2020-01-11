@@ -4,12 +4,24 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .zoom {
+          transition: transform .2s;
+          margin: 0 auto;
+        }
+
+        .zoom:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+    </style>
 </head>
 
 <body class="w3-white w3-container">
     <div class="w3-container w3-content">
         <h1>Malik Kurosaki</h1>
-        <img class="w3-image w3-circle" style="width: 150px;" src="https://i.postimg.cc/KzKV3JcM/malik.png">
+        <img class="w3-image w3-circle zoom" style="width: 150px;" src="https://i.postimg.cc/KzKV3JcM/malik.png">
         <h3>Web And Mobile App Developer</h3>
         <hr>
         <h3>Know Me</h3>
