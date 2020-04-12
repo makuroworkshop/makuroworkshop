@@ -16,182 +16,174 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
 
     <style>
-        .zoom {
-            transition: transform .3s;
-        }
-
-        .zoom:active {
-            -ms-transform: scale(2.5);
-            /* IE 9 */
-            -webkit-transform: scale(2.5);
-            /* Safari 3-8 */
-            transform: scale(2.5);
-        }
-
         .w3-container {
             padding: 0px;
         }
     </style>
 </head>
+<body>
 
-<body class="w3-white">
-    <header class=" w3-light-grey w3-card w3-padding w3-row" style="margin-bottom: 64px;">
-        <div class="w3-container w3-half">
-            <span class="w3-button">
-                <img class="" src="https://i.postimg.cc/3wTWcvGz/idea-icon.png" style="width: 30px;height: 30px;">
-            </span>
-            <span class="w3-button w3-text-blue"> makuro workshop</span>
-        </div>
-        <span class="w3-padding w3-half">
-            <a class="w3-button w3-text-grey" href="/about_me.html">About Me</a>
-            <a class="w3-button w3-text-grey" href="/join_me.html">Join Me</a>
-            <a class="w3-button w3-text-grey" href="/my_product.html">My Product</a>
-        </span>
-    </header>
+        <h1 class="w3-text-teal">Flutter Dari Noll</h1>
+        <div class="w3-container w3-content ">
+            <table class="w3-table-all">
+                <tr class="w3-black">
+                    <th class="">
+                        buku belajar flutter dari nol v1 rev 1
+                    </th>
+                    <th class="">
+                        buku belajar flutter dari nol v2
+                    </th>
+                </tr>
+                <tr class="w3-padding">
+                    <td>
+                        <img class="w3-round w3-card" src="https://github.com/makuroworkshop/makuroworkshop.github.io/blob/master/assets/images/coverv1.png?raw=true" style="width: 100%;"> 
+                    </td>
+                    <td>
+                        <img class="w3-round w3-card" src="https://github.com/makuroworkshop/makuroworkshop.github.io/blob/master/assets/images/coverv2.png?raw=true" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr class=" w3-padding">
+                    <td class="">
+                        <a id="download1" class="w3-container w3-button w3-round w3-text-blue w3-large" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/book/Flutter%20Dari%20Noll.pdf">download </a>
+                        <i id="buk1" class="w3-container w3-padding w3-text-grey"></i>
+                    </td>
+                    <td class="">
+                        <a id="download2" class="w3-container w3-button w3-round w3-text-blue w3-large w3-center" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/book/Flutter%20Dari%20noll%20-v2.pdf">download</a>
+                        <i id="buk2" class="w3-container w3-padding w3-text-grey"></i>
+                    </td>
+                </tr>
+               
+            </table>
+            <h2 class="w3-padding">saran masukan dan pertanyaan</h2>
+            <table class="w3-table-all">
+                <tr>
+                    <td>
+                        <div id="komen" class="">loading comment ...</div>
+                    </td>
+                    <td class="w3-light-grey">
+                        <div class="w3-container ">
+                            <div class="w3-margin-bottom">
+                                <input id="nama" class="w3-input" placeholder="nama">
+                                <textarea id="isi" class="w3-input" cols="5" rows="5" placeholder="ketik sesuatu"></textarea>
+                                <button id="kirim" class="w3-button w3-round w3-card w3-blue w3-input">kirim</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-    <div class="w3-content w3-padding">
-        <div class="w3-container w3-padding">
-            <h1 style="margin-top: 64px;">WEB AND MOBILE APP DEVELOPER</h1>
-            <p class="w3-text-grey">
-                Disini saya mengembangkan web dan aplikasi untuk mobile , baik android maupun iOS-flavor
-                dengan dukungan server handal seperti node js , dan base kode dari google yaitu flutter ,
-                tidak menutup kemungkinan untuk java ataupun kotlin
-            </p>
         </div>
-        <hr>
-        <div class="w3-round w3-margin w3-padding w3-container w3-border w3-pale-blue w3-content">
-            <i class="large material-icons w3-text-purple">wb_sunny</i>
-            <h1> New StartUp</h1>
-            <hr class="w3-border-blue ">
-            <i class="w3-text-grey">
-                Bergabunglah Untuk Membentuk StartUp Baru,
-                <hr>
-                saya akan membangun startup baru , yang benar benar baru alias dari noll,saat ini
-                jika anda seseorang yang memiliki kemampuan leadership, marketing kuat, problem solve handal,kreatif,
-                berani ambil resiko dan kemauan kuat untuk terus maju, berarti anda sepemikiran dengan saya,
-                ayo join dan kita bangun startup bersama
-            </i>
+        <div class="w3-padding">
+            web ini dibuat hanya menggunakan github io javascript dan firebase sebagai database, yang mau tutor atau minta source code wa aja ke 081338929722
+            <br>
+            malikkurosaki@2020
         </div>
-        <div class="w3-container w3-row" style="margin-top: 64px;">
-            <img class="w3-cell w3-third w3-image w3-border w3-round w3-border-black w3-card zoom"
-                src="https://i.postimg.cc/gJ0zCq2t/Screen-Shot-2019-10-31-at-12-29-00-PM.png">
-            <span class="w3-padding w3-cell">
-                <div class="w3-row w3-container">
-                    <h3>Expressive and Flexible UI</h3>
-                    <div class="w3-text-grey">
-                        Quickly ship features with a focus on native end-user experiences. Layered architecture allows
-                        for full customization, which results in incredibly fast rendering and expressive and flexible
-                        designs.
+
+
+        <script>
+            // Your web app's Firebase configuration
+            var buku1;
+            var buku2;
+
+            var refKlickBuku1 = "buku/download/buku1";
+            var refKlickBuku2 = "buku/download/buku2";
+
+            var buk1 = document.getElementById("buk1")
+            var buk2 = document.getElementById("buk2")
+
+            var test = document.getElementById("test")
+
+            var download1 = document.getElementById("download1");
+            var download2 = document.getElementById("download2");
+
+            var komen = document.getElementById("komen");
+
+            var nama = document.getElementById("nama");
+            var isi = document.getElementById("isi");
+            var kirim = document.getElementById("kirim");
+
+            var firebaseConfig = {
+              apiKey: "AIzaSyDNVlrTm7yXtbUXeDhRZ06yIob0czbpfIo",
+              authDomain: "panduan-flutter.firebaseapp.com",
+              databaseURL: "https://panduan-flutter.firebaseio.com",
+              projectId: "panduan-flutter",
+              storageBucket: "panduan-flutter.appspot.com",
+              messagingSenderId: "528518214220",
+              appId: "1:528518214220:web:e61e2d643cf2a49ecd7ae9",
+              measurementId: "G-TWFGEH3N5B"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            
+            // firebase.database().ref("buku/download/buku2").set({
+            //     "click":""
+            // }).then((snapshot)=>{
+                
+            // });
+
+            firebase.database().ref('buku').on("value",(snapshot)=>{
+
+                buku1 = snapshot.val().download.buku1.click;
+                buku2 = snapshot.val().download.buku2.click;
+
+                buk1.innerHTML = `total ${buku1} download`
+                buk2.innerHTML = `total ${buku2} download`
+            });
+
+            download1.onclick = ()=>{
+                firebase.database().ref(refKlickBuku1).set({
+                    "click": Number(buku1)+1
+                });
+            }
+            download2.onclick = ()=>{
+                firebase.database().ref(refKlickBuku2).set({
+                    "click":Number(buku2)+1
+                })
+            }
+
+            kirim.onclick = ()=>{
+                if(nama.value == "" || isi.value == ""){
+                    alert("anda dilarang mengirim sesuatu yang kosong")
+                    return;
+                }
+                firebase.database().ref("buku/komen/").push().set({
+                    "nama":nama.value,
+                    "isi":isi.value
+                },(err)=>{
+                    if(err){
+                        alert("pesan tidak terkirim");
+                        return;
+                    } 
+                })
+                isi.value = ""
+            }
+
+            firebase.database().ref("buku/komen/").on("value",(snap)=>{
+                
+                var dat = []
+                snap.forEach(element => {
+                   var kom = `
+                    <div class="w3-margin-bottom w3-light-grey w3-tag w3-round w3-container ">
+                        <div class="w3-tag w3-round">${element.val().nama}</div> 
+                        <div class="w3-tag w3-light-grey w3-padding w3-round"> <i class="w3-text-grey">${element.val().isi}</i></div>
                     </div>
-                </div>
-                <div class="w3-container w3-row">
-                    <h3>Expressive, beautiful UIs</h3>
-                    <div class="w3-text-grey">
-                        Delight your users with Flutter's built-in beautiful Material Design and Cupertino (iOS-flavor)
-                        widgets, rich motion APIs, smooth natural scrolling, and platform awareness.
-                    </div>
-                </div>
-            </span>
-        </div>
-        <div class="w3-container " style="margin-top: 64px;">
-            <div class="w3-row">
-                <div class="w3-padding w3-quarter">
-                    <img class="w3-image w3-card w3-border w3-round zoom"
-                        src="https://i.postimg.cc/cChJgxLC/Navigation-Drawer.jpg">
-                </div>
-                <div class="w3-padding w3-quarter">
-                    <img class="w3-image w3-card w3-border w3-round zoom"
-                        src="https://i.postimg.cc/LXz5SBdz/Ways-Available.jpg">
-                </div>
-                <div class="w3-padding w3-quarter ">
-                    <img class="w3-image w3-card w3-border w3-round zoom "
-                        src="https://i.postimg.cc/j24DH6Zs/Flutter-Contact-App53.png">
-                </div>
-                <div class="w3-padding w3-quarter">
-                    <img class="w3-image w3-card w3-border w3-round zoom"
-                        src="https://i.postimg.cc/7P3JrDDp/Flutter-Contact-Apps.png">
-                </div>
+                    <br>
 
-            </div>
-        </div>
-        <div class="w3-container" style="margin-top: 64px;">
-            <h3>With Powerfull Flutter Support</h3>
-            <p class="w3-text-grey">Flutter is Google’s UI toolkit for building beautiful, natively compiled
-                applications for mobile, web, and desktop from a single codebase.</p>
-            <div class="w3-row-padding w3-margin-top">
-                <div class="w3-half w3-margin-top">
-                    <div class="">
-                        <img class="zoom w3-border w3-round w3-card"
-                            src="https://i.postimg.cc/90V63cbm/Screen-Shot-2020-01-11-at-15-50-15.png"
-                            style="width:100%">
-                    </div>
-                </div>
+                   `
+                   dat.push(kom)
+                });
+                dat.reverse();
+                komen.innerHTML = dat.join("");
+            })
 
-                <div class="w3-half w3-margin-top">
-                    <div class="">
-                        <img class="zoom w3-border w3-round w3-card "
-                            src="https://i.postimg.cc/MT1Crny3/Screen-Shot-2020-01-11-at-15-51-20.png"
-                            style="width:100%">
-                    </div>
-                </div>
+          </script>
+    </body>
 
-            </div>
-            <div class="w3-container w3-padding w3-margin-top">
-                <img class="w3-image w3-card w3-border w3-round zoom"
-                    src="https://i.postimg.cc/TYstgRbK/Screen-Shot-2020-01-11-at-16-00-00.png">
-            </div>
-        </div>
-        <div class="w3-container " style="margin-top: 64px;">
-            <h3>Node Js Support For Server</h3>
-            <p class="w3-text-grey">
-                JavaScript’s rising popularity has brought with it a lot of changes, and the face of web development
-                today is dramatically different. The things that we can do on the web nowadays with JavaScript running
-                on the server, as well as in the browser, were hard to imagine just several years ago, or were
-                encapsulated within sandboxed environments like Flash or Java Applets.
-            </p>
-            <img class="w3-image w3-round w3-border w3-card zoom"
-                src="https://i.postimg.cc/B6vFmF94/opensource-nodejs-api-framework-and-server-for-enterprise-12-638.jpg">
-        </div>
-        <div class="w3-container" style="margin-top: 64px;">
-            <h3>Full Support Google Playstore</h3>
-            <p class="w3-text-grey">
-                ini adalah beberapa aplikasi yang telah saya buat dan sudah berada di playstore
-            </p>
-            <img class="w3-image w3-card w3-border w3-round zoom"
-                src="https://i.postimg.cc/d1QpQwp4/Screen-Shot-2020-01-11-at-16-58-56.png">
-        </div>
-        <div class="w3-container" style="margin-top: 64px;">
-            <h3>Full Support Android Studio</h3>
-            <p class="w3-text-grey">
-                menggunakan android studio untuk pengembangan mobile app ,android dan ios serta web base,
-                dengan full module dukungan penuh dari google , flutter , java , kotlin
-            </p>
-            <img class="w3-image w3-border w3-round w3-card zoom"
-                src="https://i.postimg.cc/8c715h9K/Screen-Shot-2020-01-11-at-18-26-29.png">
-        </div>
-
-        <div class="w3-container " style="margin-top: 64px;">
-            <h3>Full Support VS Code</h3>
-            <p class="w3-text-grey">untuk kebutuhan pengembangan web dan server , menggunakan vscode yang sudah terbukti
-                ramah untuk pengembangan server dan aplikasi berbasis web ,dengan dukungan banyak extention
-                , html ,javascript,php,dart ,java , dan lainnya
-            </p>
-            <img src="https://i.postimg.cc/tCsMRhmY/Screen-Shot-2020-01-12-at-11-33-04.png"
-                class="w3-image w3-round w3-border w3-card">
-        </div>
-    </div>
-
-    <footer class="w3-container w3-padding w3-card w3-light-grey" style="margin-top: 64px;">
-        <h3 class="w3-text-blue">Makuro Workshop </h3>
-        <div class="w3-snall w3-text-grey">
-            web and mobile app developmemnt
-        </div>
-        <hr>
-        <p class="w3-padding w3-text-grey"> malikkurosaki@2019 | kurosakiblackangel@gmail.com | wa: 081338929722
-            all-right-reserved</p>
-    </footer>
-</body>
 
 </html>
