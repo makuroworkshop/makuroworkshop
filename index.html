@@ -19,6 +19,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
         <style>
             .w3-container{
                 padding: 0px;
@@ -69,11 +70,11 @@
                 </div>
                 <div class="w3-col s6 w3-padding ">
                     <div class="w3-container w3-margin-bottom">
-                        <a class="w3-xlarge" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/file/app-armeabi-v7a-release.apk">DOWNLOAD APK</a>
+                        <a id="apk" class="w3-xlarge" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/file/app-armeabi-v7a-release.apk">DOWNLOAD APK</a><br><span class="w3-tag" id="apk_click">...</span>
                         
                     </div>
                     <div class="w3-container">
-                        <a class ="w3-xlarge" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/file/pantau_korona.zip">DOWNLOAD SOURCE CODE FLUTTER</a>
+                        <a id="sourcode" class ="w3-xlarge" href="https://raw.githubusercontent.com/makuroworkshop/makuroworkshop.github.io/master/assets/file/pantau_korona.zip">DOWNLOAD SOURCE CODE FLUTTER</a> <br><span class="w3-tag" id="sourcode_click">...</span>
                     </div>
                     <div class="w3-container">
                         catatan : bagi yang ingin meng copy cource codenya dan ingin membuild ulang , sebagai code etik cantumkan nama saya di aplikasi kalian , atau jika tidak boleh donasi untuk penyemangat bikin source code kesaya wa: 081338929722
@@ -109,6 +110,8 @@
 
             var refKlickBuku1 = "buku/download/buku1";
             var refKlickBuku2 = "buku/download/buku2";
+            var refKlickapk = "buku/download/apk";
+            var refKlicksourcode = "buku/download/sourcode";
 
             var buk1 = document.getElementById("buk1")
             var buk2 = document.getElementById("buk2")
@@ -123,6 +126,11 @@
             var nama = document.getElementById("nama");
             var isi = document.getElementById("isi");
             var kirim = document.getElementById("kirim");
+            
+            var apk = document.getElementById("apk")
+            var sourcode = document.getElementById("sourcode")
+            var apkClick = document.getElementById("apk_click")
+            var courcodeClick = document.getElementById("sourcode_click")
 
             var firebaseConfig = {
               apiKey: "AIzaSyDNVlrTm7yXtbUXeDhRZ06yIob0czbpfIo",
@@ -148,9 +156,14 @@
 
                 buku1 = snapshot.val().download.buku1.click;
                 buku2 = snapshot.val().download.buku2.click;
+                apk1 = snapshot.val().download.apk.click;
+                sourcode1 = snapshot.val().download.sourcode.click;
 
                 buk1.innerHTML = `total ${buku1} download`
                 buk2.innerHTML = `total ${buku2} download`
+                
+                apkClick.innerHTML = `total ${apk1} download`
+                courcodeClick.innerHTML = `total ${sourcode1} download`
             });
 
             download1.onclick = ()=>{
@@ -161,6 +174,17 @@
             download2.onclick = ()=>{
                 firebase.database().ref(refKlickBuku2).set({
                     "click":Number(buku2)+1
+                })
+            }
+            apk.onclick = ()=>{
+                firebase.database().ref(refKlickapk).set({
+                    "click":Number(apk1)+1
+                })
+            }
+            
+            sourcode.onclick = ()=>{
+                firebase.database().ref(refKlicksourcode).set({
+                    "click":Number(sourcode1)+1
                 })
             }
 
